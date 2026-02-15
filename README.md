@@ -20,11 +20,12 @@ A premium, multi-page website for LORITO, a luxury perfume brand.
 - **AOS**: Animate On Scroll library.
 
 ## How to Run
-
+https://dinulishamindi.github.io/Perfume-Website/
 
 - `index.html`: Home page.
 - `products.html`: Products catalog.
 - `about.html`: About page.
 - `contact.html`: Contact page.
 - `script.js`: Shared JavaScript logic.
+
 
