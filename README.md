@@ -20,15 +20,11 @@ A premium, multi-page website for LORITO, a luxury perfume brand.
 - **AOS**: Animate On Scroll library.
 
 ## How to Run
-Since this is a static website using CDN for dependencies:
-1. Simply double-click on `index.html` to open it in your browser.
-2. Ensure you have an internet connection to load FontAwesome icons, Google Fonts, and Tailwind CSS and images.
 
-No installation or build process (Node.js) is required.
 
-## Structure
 - `index.html`: Home page.
 - `products.html`: Products catalog.
 - `about.html`: About page.
 - `contact.html`: Contact page.
 - `script.js`: Shared JavaScript logic.
+
