@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | LORITO</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'lorito-gold': '#D4AF37',
+                        'lorito-dark': '#0f0f0f',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .glass-nav {
+            background: rgba(15, 15, 15, 0.9);
+            backdrop-filter: blur(10px);
+        }
+
+        .text-justified {
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body class="bg-lorito-dark text-white font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-serif font-bold tracking-widest text-lorito-gold">LORITO</a>
+            <div class="hidden md:flex space-x-12 items-center">
+                <a href="index.html"
+                    class="text-sm uppercase tracking-widest hover:text-lorito-gold text-white/80 transition-colors">Home</a>
+                <a href="products.html"
+                    class="text-sm uppercase tracking-widest hover:text-lorito-gold text-white/80 transition-colors">Collections</a>
+                <a href="about.html" class="text-sm uppercase tracking-widest text-lorito-gold transition-colors">Our
+                    Goodness</a>
+                <a href="contact.html"
+                    class="text-sm uppercase tracking-widest hover:text-lorito-gold text-white/80 transition-colors">Contact</a>
+                <button class="text-white hover:text-lorito-gold"><i
+                        class="fa-solid fa-bag-shopping text-xl"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative h-[60vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-cover bg-center bg-fixed"
+            style="background-image: url('images/moonlight.jpg'); filter: brightness(0.4);">
+        </div>
+        <div class="relative z-10 text-center px-4" data-aos="fade-up">
+            <h1 class="text-5xl md:text-7xl font-serif mb-6">The Essence of Time</h1>
+            <p class="text-xl md:text-2xl font-light text-lorito-gold italic">"Crafting memories, drop by drop."</p>
+        </div>
+    </header>
+
+    <!-- Narrative Section -->
+    <section class="py-24 max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <div data-aos="fade-right">
+                <h2 class="text-4xl font-serif mb-8 text-lorito-gold">Our Beginnings</h2>
+                <p class="text-gray-300 leading-loose mb-6 text-lg">
+                    Founded in the heart of Grasse, LORITO began as a small family apothecary dedicated to the healing
+                    power of botanicals. Over generations, our passion evolved from medicinal concoctions to the fine
+                    art of perfumery.
+                </p>
+                <p class="text-gray-300 leading-loose text-lg">
+                    We believe that a fragrance is not merely an accessory but an invisible aura that defines one's
+                    presence. Every bottle of LORITO is a testament to patience, precision, and an unwavering commitment
+                    to quality.
+                </p>
+            </div>
+            <div class="relative" data-aos="fade-left">
+                <div
+                    class="absolute -inset-4 border border-lorito-gold/30 rounded-sm transform translate-x-4 translate-y-4">
+                </div>
+                <img src="images/lab.jpg" alt="Lab"
+                    class="relative z-10 shadow-2xl rounded-sm grayscale hover:grayscale-0 transition-all duration-700">
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="py-24 bg-white/5">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <span class="text-lorito-gold tracking-widest text-xs font-bold uppercase">The Process</span>
+            <h2 class="text-4xl font-serif mt-3 mb-16">From Earth to Bottle</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="p-8 border border-white/10 hover:border-lorito-gold transition-colors duration-500 group"
+                    data-aos="fade-up" data-aos-delay="0">
+                    <div class="text-4xl text-lorito-gold mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h3 class="text-xl font-serif mb-4">Sourcing</h3>
+                    <p class="text-gray-400 leading-relaxed">We travel the globe to select only the rarest and most
+                        potent raw materials, ensuring ethical harvesting.</p>
+                </div>
+
+                <div class="p-8 border border-white/10 hover:border-lorito-gold transition-colors duration-500 group"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl text-lorito-gold mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+                    <h3 class="text-xl font-serif mb-4">Distillation</h3>
+                    <p class="text-gray-400 leading-relaxed">Our master distillers use centuries-old techniques to
+                        extract the purest oils, preserving their soul.</p>
+                </div>
+
+                <div class="p-8 border border-white/10 hover:border-lorito-gold transition-colors duration-500 group"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl text-lorito-gold mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-hand-sparkles"></i>
+                    </div>
+                    <h3 class="text-xl font-serif mb-4">Maturation</h3>
+                    <p class="text-gray-400 leading-relaxed">Each blend is aged in French oak barrels for months,
+                        allowing the notes to harmonize perfectly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Simplified) -->
+    <footer class="bg-black py-10 border-t border-white/10 mt-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-gray-600 text-sm">
+            <p>&copy; 2024 LORITO Perfumes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

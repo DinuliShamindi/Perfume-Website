@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections | LORITO</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'lorito-gold': '#D4AF37',
+                        'lorito-dark': '#0f0f0f',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .product-card:hover .overlay {
+            opacity: 1;
+        }
+
+        .glass-nav {
+            background: rgba(15, 15, 15, 0.9);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body class="bg-lorito-dark text-white font-sans antialiased">
+
+    <!-- Navigation (Same as Home) -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-serif font-bold tracking-widest text-lorito-gold">LORITO</a>
+            <div class="hidden md:flex space-x-12 items-center">
+                <a href="index.html"
+                    class="text-sm uppercase tracking-widest hover:text-lorito-gold text-white/80 transition-colors">Home</a>
+                <a href="products.html"
+                    class="text-sm uppercase tracking-widest text-lorito-gold transition-colors">Collections</a>
+                <a href="about.html"
+                    class="text-sm uppercase tracking-widest hover:text-lorito-gold text-white/80 transition-colors">Our
+                    Goodness</a>
+                <a href="contact.html"
+                    class="text-sm uppercase tracking-widest hover:text-lorito-gold text-white/80 transition-colors">Contact</a>
+                <button class="text-white hover:text-lorito-gold"><i
+                        class="fa-solid fa-bag-shopping text-xl"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-40 pb-20 text-center px-6 bg-gradient-to-b from-black to-lorito-dark">
+        <h1 class="text-5xl md:text-6xl font-serif mb-4" data-aos="fade-down">The Collections</h1>
+        <p class="text-gray-400 max-w-2xl mx-auto text-lg" data-aos="fade-up" data-aos-delay="100">
+            Explore our exclusive range of hand-crafted perfumes. Each bottle tells a unique story.
+        </p>
+    </header>
+
+    <!-- Filter/Sort -->
+    <div class="max-w-7xl mx-auto px-6 mb-12 flex justify-between items-center border-b border-white/10 pb-4">
+        <div class="flex space-x-6 text-sm uppercase tracking-wider text-gray-500 filter-buttons">
+            <button class="text-lorito-gold font-bold transition-colors" data-filter="all">All</button>
+            <button class="hover:text-lorito-gold transition-colors" data-filter="floral">Floral</button>
+            <button class="hover:text-lorito-gold transition-colors" data-filter="woody">Woody</button>
+            <button class="hover:text-lorito-gold transition-colors" data-filter="fresh">Fresh</button>
+            <button class="hover:text-lorito-gold transition-colors" data-filter="oriental">Oriental</button>
+        </div>
+        <div class="hidden md:block text-gray-500 text-sm">
+            Showing <span id="product-count">6</span> Products
+        </div>
+    </div>
+
+    <!-- Product Grid -->
+    <section class="max-w-7xl mx-auto px-6 pb-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+            <!-- Product 1 -->
+            <div class="group product-card" data-aos="fade-up" data-category="floral">
+                <div class="relative h-[450px] overflow-hidden bg-gray-900">
+                    <img src="images/midnight-rose.jpg" alt="Midnight Rose"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100">
+                    <div
+                        class="overlay absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-300 flex items-center justify-center">
+                        <button
+                            class="bg-white text-black px-8 py-3 uppercase tracking-widest hover:bg-lorito-gold transition-colors font-medium">Add
+                            to Cart</button>
+                    </div>
+                    <div
+                        class="absolute top-4 right-4 bg-lorito-gold text-black text-xs font-bold px-3 py-1 uppercase tracking-widest">
+                        New</div>
+                </div>
+                <div class="pt-6 text-center">
+                    <h3 class="text-2xl font-serif mb-1 group-hover:text-lorito-gold transition-colors">Midnight Rose
+                    </h3>
+                    <p class="text-gray-500 text-sm mb-3">Oud & Damask Rose</p>
+                    <span class="text-lorito-gold font-medium text-lg">$145.00</span>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="group product-card" data-aos="fade-up" data-aos-delay="100" data-category="woody">
+                <div class="relative h-[450px] overflow-hidden bg-gray-900">
+                    <img src="images/royal-amber.jpg" alt="Royal Amber"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100">
+                    <div
+                        class="overlay absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-300 flex items-center justify-center">
+                        <button
+                            class="bg-white text-black px-8 py-3 uppercase tracking-widest hover:bg-lorito-gold transition-colors font-medium">Add
+                            to Cart</button>
+                    </div>
+                </div>
+                <div class="pt-6 text-center">
+                    <h3 class="text-2xl font-serif mb-1 group-hover:text-lorito-gold transition-colors">Royal Amber</h3>
+                    <p class="text-gray-500 text-sm mb-3">Vanilla & Smoked Wood</p>
+                    <span class="text-lorito-gold font-medium text-lg">$180.00</span>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="group product-card" data-aos="fade-up" data-aos-delay="200" data-category="fresh">
+                <div class="relative h-[450px] overflow-hidden bg-gray-900">
+                    <img src="images/oceanic-mist.jpg" alt="Oceanic Mist"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100">
+                    <div
+                        class="overlay absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-300 flex items-center justify-center">
+                        <button
+                            class="bg-white text-black px-8 py-3 uppercase tracking-widest hover:bg-lorito-gold transition-colors font-medium">Add
+                            to Cart</button>
+                    </div>
+                </div>
+                <div class="pt-6 text-center">
+                    <h3 class="text-2xl font-serif mb-1 group-hover:text-lorito-gold transition-colors">Oceanic Mist
+                    </h3>
+                    <p class="text-gray-500 text-sm mb-3">Sea Salt & Sage</p>
+                    <span class="text-lorito-gold font-medium text-lg">$135.00</span>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="group product-card" data-aos="fade-up" data-category="oriental">
+                <div class="relative h-[450px] overflow-hidden bg-gray-900">
+                    <img src="images/velvet-night.jpg" alt="Velvet Night"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100">
+                    <div
+                        class="overlay absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-300 flex items-center justify-center">
+                        <button
+                            class="bg-white text-black px-8 py-3 uppercase tracking-widest hover:bg-lorito-gold transition-colors font-medium">Add
+                            to Cart</button>
+                    </div>
+                </div>
+                <div class="pt-6 text-center">
+                    <h3 class="text-2xl font-serif mb-1 group-hover:text-lorito-gold transition-colors">Velvet Night
+                    </h3>
+                    <p class="text-gray-500 text-sm mb-3">Black Orchid & Spice</p>
+                    <span class="text-lorito-gold font-medium text-lg">$160.00</span>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="group product-card" data-aos="fade-up" data-aos-delay="100" data-category="woody">
+                <div class="relative h-[450px] overflow-hidden bg-gray-900">
+                    <img src="images/golden-hour.jpg" alt="Golden Hour"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100">
+                    <div
+                        class="overlay absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-300 flex items-center justify-center">
+                        <button
+                            class="bg-white text-black px-8 py-3 uppercase tracking-widest hover:bg-lorito-gold transition-colors font-medium">Add
+                            to Cart</button>
+                    </div>
+                    <div
+                        class="absolute top-4 left-4 bg-white/10 text-white backdrop-blur-md text-xs font-bold px-3 py-1 uppercase tracking-widest border border-white/20">
+                        Best Seller</div>
+                </div>
+                <div class="pt-6 text-center">
+                    <h3 class="text-2xl font-serif mb-1 group-hover:text-lorito-gold transition-colors">Golden Hour</h3>
+                    <p class="text-gray-500 text-sm mb-3">Citrus & Sandalwood</p>
+                    <span class="text-lorito-gold font-medium text-lg">$150.00</span>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="group product-card" data-aos="fade-up" data-aos-delay="200" data-category="floral">
+                <div class="relative h-[450px] overflow-hidden bg-gray-900">
+                    <img src="images/ethereal.jpg" alt="Ethereal"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100">
+                    <div
+                        class="overlay absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-300 flex items-center justify-center">
+                        <button
+                            class="bg-white text-black px-8 py-3 uppercase tracking-widest hover:bg-lorito-gold transition-colors font-medium">Add
+                            to Cart</button>
+                    </div>
+                </div>
+                <div class="pt-6 text-center">
+                    <h3 class="text-2xl font-serif mb-1 group-hover:text-lorito-gold transition-colors">Ethereal</h3>
+                    <p class="text-gray-500 text-sm mb-3">White Tea & Jasmine</p>
+                    <span class="text-lorito-gold font-medium text-lg">$125.00</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black pt-20 pb-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 text-center text-gray-600 text-sm">
+            <p>&copy; 2024 LORITO Perfumes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
